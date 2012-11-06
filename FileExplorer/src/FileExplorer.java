@@ -13,7 +13,7 @@ import javax.swing.event.TreeSelectionListener;
 
 public class FileExplorer {
     public static void main( String[] argv ) {
-        JFrame frame = new JFrame( "File Explorer" );
+        JFrame frame = new JFrame( "File Explorer PlanA" );
 
         frame.addWindowListener( new WindowAdapter() {
                                      public void windowClosing( WindowEvent e ) {
