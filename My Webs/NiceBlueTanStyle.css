@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  
+
+
+  
+  <title>XML Document</title>
+  <style type="text/css">
+<!--
+body {
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+font-family: verdana, helvetica, sans-serif;
+font-size: 12px;
+} 
+h1 {
+color:#4274c2;
+font-size: 22px;
+margin-left: 0px;
+margin-top: 25px;
+font-family: monospace;
+}
+h2 {
+color: #4274c2;
+font-size: 18px;
+margin-left: 0px;
+font-family: monospace;
+margin-bottom: 5px;
+}
+h3 {
+color:#4274c2;
+font-size: 16px;
+margin-left: 10px;
+font-family: monospace;
+margin-bottom: 2px;
+}
+h4 {
+color:#4274c2;
+font-size: 12px;
+margin-left: 20px;
+font-family: monospace;
+margin-bottom: 2px;
+}
+a {
+color:#553333; }
+div.header a {
+color:#eeeecc;
+}
+div.header {
+color:#eeeecc;
+}
+div.footer {
+margin-left: 6px;
+}
+pre.code b {
+color:#000000;
+}
+pre.out b {
+color:#000000;
+}
+pre.code {
+background-color:#f6f9e3;
+color:#10205f;
+padding-left:10px; padding-right:10px; padding-top:5px;
+padding-bottom:5px;
+margin-top:2px;
+border:1px solid #004080;
+margin-left:20px;
+}
+pre.out {
+background-color:#ebf6f9;
+color:101020;
+padding-left:10px; padding-right:10px; padding-top:5px;
+padding-bottom:2px;
+margin-top:2px;
+margin-left:20px;
+border:1px solid #b09040;
+}
+pre {
+padding: 0px; margin-top: 6px;
+margin-bottom: 14px;
+}
+span.keyword {
+color:#ff5d6e
+}
+div.quote {
+margin-left:40px;
+margin-right:40px;
+border:1px dotted #e0e0c0;
+background-color: #d5e5c5;
+font-size:11px;
+}
+div.small {
+padding-left:40px;
+padding-top:10px;
+font-size:9px;
+}
+div.txt {
+width: 400px;
+margin-bottom:9px;
+margin-left:20px;
+}
+img.img {
+margin-left:20px;
+}
+body table tr td table {
+margin-left:20px;
+}
+div.filename {
+font-size:10px;
+font-style:italic;
+margin-left:20px;
+}
+h2.comment {
+font-size:14px;
+color:#ff2233;
+}
+ul {margin-top:1px;margin-bottom:9px;}
+ol {margin-top:1px;margin-bottom:9px;}
+li {margin-bottom: 2px}
+-->
+  </style>
+</head>
+
+
+<body onload="if (self != top) top.location = self.location;" style="color: rgb(0, 0, 0); background-color: rgb(238, 238, 204);">
+
+
+<div class="header">
+<table summary="header" bgcolor="#4274c2" width="100%">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td></td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td width="202"></td>
+
+
+      <td style="font-size: 17px;">Title of the Page</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td></td>
+
+
+      <td> GBH<br>
+
+
+&nbsp; </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+</div>
+
+
+<table summary="layout table" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+  <tbody>
+
+
+    <tr valign="top">
+
+
+      <td width="162"></td>
+
+
+      <td width="25"></td>
+
+
+      <td>
+      
+      <h1>Heading 1</h1>  
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr valign="top">
+
+
+      <td>
+   
+
+
+      <td>
+      
+      <div>
+      
+      <pre class="code">Code
+</pre>
+
+
+      </div>
+
+
+      
+      <div class="txt"> A document consists of the <a href="#prolog">prolog</a> and the <a href="#root_element">root element</a>. </div>
+
+
+      
+      <h2 id="prolog">The heading 2</h2>
+
+
+      
+      <h3 id="declaration">Heading 3</h3>
+
+
+      
+      <div class="txt"> txt... </div>
+
+
+      
+      <div>
+      
+      <pre class="code">code
+</pre>
+
+
+      </div>
+
+
+      
+      <div class="txt"> The document prolog can set three
+properties:
+      
+      <ul>
+
+
+        <li>version </li>
+
+
+        <li>encoding<br>
+
+
+for example <b>encoding="UTF-8"</b> </li>
+
+
+        <li>standalone<br>
+
+
+Possible values: <i>yes</i> and <i>no</i>.
+Yes: All <a href="#dtd">DTD</a> definitions are
+contained within the <b>internal subset</b>. No: There is
+an <b>external subset</b>. Caution: yes only stipulates
+that the DTD is contained, but there might still be external entities. </li>
+
+
+      
+      </ul>
+
+
+      </div>
+      <br>
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<hr>
+<div class="footer">footer </div>
+
+
+</body>
+</html>

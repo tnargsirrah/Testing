@@ -1,0 +1,356 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>ImageJ Macros</title>
+<meta name="Microsoft Theme" content="adlctheme 011, default">
+</head>
+
+<body background="../_themes/adlctheme/casbkgnd.gif" bgcolor="#333366" text="#FFFFFF" link="#99CCFF" vlink="#999999" alink="#993300"><!--mstheme--><font face="Verdana">
+
+<font color="#224488">
+<h2><!--mstheme--><font face="georgia, Times New Roman, Times">ImageJ Macros<!--mstheme--></font></h2>
+<h2><!--mstheme--><font face="georgia, Times New Roman, Times">Macro Language Operators<!--mstheme--></font></h2>
+</font>
+<blockquote>
+  <!--mstheme--></font><table border="1" bordercolordark="#336699" bordercolorlight="#336699">
+    <tbody>
+      <tr>
+        <th><!--mstheme--><font face="Verdana">Operator<!--mstheme--></font></th>
+        <th><!--mstheme--><font face="Verdana">Prec.<!--mstheme--></font></th>
+        <th><!--mstheme--><font face="Verdana">Description<!--mstheme--></font></th>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">++<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">1<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">pre or post increment<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">--<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">1<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">pre or post decrement<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">-<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">1<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">unary minus<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">!<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">1<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">boolean complement<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">~<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">1<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">bitwise complement<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">*<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">multiplication<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">/<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">division<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">%<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">remainder<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">&amp;<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">bitwise AND<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">|<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">bitwise OR<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">^<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">bitwise XOR<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">&lt;&lt;, &gt;&gt;<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">2<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">left shift, right shift<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">+<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">3<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">addition or string concatenation<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">-<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">3<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">subtraction<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">&lt;, &lt;=<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">4<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">less than, less than or equal<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">&gt;, &gt;=<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">4<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">greater than, greater than or equal<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">==, !=<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">4<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">equal, not equal<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">&amp;&amp;<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">5<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">boolean AND<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">||<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">5<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">boolean OR<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">=<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">6<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">assignment<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td><!--mstheme--><font face="Verdana">+=, -=, *=, /=<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">6<!--mstheme--></font></td>
+        <td><!--mstheme--><font face="Verdana">assignment with operation<!--mstheme--></font></td>
+      </tr>
+    </tbody>
+  </table><!--mstheme--><font face="Verdana">
+</blockquote>
+<p>&nbsp;<font color="#224488">
+<h2><!--mstheme--><font face="georgia, Times New Roman, Times">Built-in Macro Functions<!--mstheme--></font></h2>
+</font>
+<blockquote>
+  <b>abs(n)</b><br>
+  Returns the absolute value of <i>n</i>.
+  <p><b>autoUpdate(boolean)</b><br>
+  If <i>boolean</i> is true, the display is refreshed each time lineTo(),
+  drawLine(), drawString(), etc. are called, otherwise, the display is refreshed
+  only when updateDisplay() is called or when the macro terminates.
+  <p><b>beep()</b><br>
+  Emits an audible beep.
+  <p><b>bitDepth()</b><br>
+  Returns the bit depth of the active image: 8, 16, 24 (RGB) or 32 (float).
+  Requires v1.30a or later.
+  <p><b>changeValues(v1, v2, v3)</b><br>
+  Changes pixels in the image or selection that have a value in the range <i>v1</i>-<i>v2</i>
+  to <i>v3</i>.
+  <p><b>cos(angle)</b><br>
+  Returns the cosine of an angle (in radians).
+  <p><b>d2s()</b><br>
+  This function will probably be replaced by one with a better name.
+  <p><b>doCommand(&quot;Command&quot;)</b><br>
+  Runs an ImageJ menu command in a separate thread and returns immediately. As
+  an example, &quot;doCommand('Start Animation [=]')&quot; starts animating the
+  current stack in a separate thread and the macro continues to execute. Use
+  &quot;run(doCommand('Start Animation [=]')&quot; and the macro hangs until the
+  user stops the animation.
+  <p><b>doWand(x, y)</b><br>
+  Equivalent to clicking on the current image at (x,y) with the wand tool.
+  <p><b>drawLine(x1, y1, x2, y2)</b><br>
+  Draws a line between (x1, y1) and (x2, y2). Use setColor() to specify the
+  color of the line and setLineWidth() to vary the line width.
+  <p><b>drawString(&quot;text&quot;, x, y)</b><br>
+  Draws the specified text staring at the (x,y).
+  <p><b>dump()</b><br>
+  Writes the contents of the symbol table, the tokenized macro code and the
+  variable stack to the &quot;Log&quot; window.
+  <p><b>exit([&quot;error message&quot;])</b><br>
+  Terminates execution of the macro and, optionally, displays an error message.
+  Requires v1.30a or later.
+  <p><b>exp()</b><br>
+  Returns the exponential number e (i.e., 2.718...) raised to the power of <i>n</i>.
+  <p><b>fill()</b><br>
+  Fills the image or selection with the current drawing color.
+  <p><b>floor(n)</b><br>
+  Returns the largest value that is not greater than <i>n</i> and is equal to an
+  integer.
+  <p><b>getHeight()</b><br>
+  Returns the height in pixels of the current image.
+  <p><b>getNumber(&quot;prompt&quot;, defaultValue)</b><br>
+  Displays a dialog box and returns the number entered by the user. The first
+  argument is the prompting message and the second is the value initially
+  displayed in the dialog. Exits the macro if the user clicks on
+  &quot;Cancel&quot; in the dialog. Returns <i>defaultValue</i> if the user
+  enters an invalid number.
+  <p><b>getPixel(x, y)</b><br>
+  Returns the value of the pixel at <i>(x,y)</i>.
+  <p><b>getResult(&quot;Column&quot;, row)</b><br>
+  Returns a measurement from the ImageJ results table. The first argument
+  specifies a column in the table. It must be a &quot;Results&quot; window
+  column label, such as &quot;Area&quot;, &quot;Mean&quot; or &quot;Circ.&quot;.
+  The second argument specifies the row, where 0&lt;=<i>row</i>&lt;nResults. <i>nResults</i>
+  is a predefined variable that contains the current measurement count.
+  (Actually, it's a built-in function with the &quot;()&quot; optional.)
+  <p><b>getString(&quot;prompt&quot;, &quot;default&quot;)</b><br>
+  Displays a dialog box and returns the string entered by the user. The first
+  argument is the prompting message and the second is the initial string value.
+  Exits the macro if the user clicks on &quot;Cancel&quot; or enters an empty
+  string.
+  <p><b>getTime()</b><br>
+  Returns the current time in milliseconds.
+  <p><b>getTitle()</b><br>
+  Returns the title of the current image.
+  <p><b>getWidth()</b><br>
+  Returns the width in pixels of the current image.
+  <p><b>lengthOf(str)</b><br>
+  Returns the length of the string <i>str</i>.
+  <p><b>lineTo(x, y)</b><br>
+  Draws a line from current location to (<i>x,y</i>) .
+  <p><b>log(n)</b><br>
+  Returns the natural logarithm (base e) of <i>n</i>.
+  <p><b>makeLine(x1, y1, x2, y2)</b><br>
+  Creates a new straight line selection. The origin (0,0) is assumed to be the
+  upper left corner of the image. Coordinates are in pixels.
+  <p><b>makeOval(x, y, width, height)</b><br>
+  Creates an elliptical selection, where (<i>x,y</i>) define the upper left
+  corner of the bounding rectangle of the ellipse.
+  <p><b>makeRectangle(x, y, width, height)</b><br>
+  Creates a rectangular selection. The <i>x</i> and <i>y</i> arguments are the
+  coordinates (in pixels) of the upper left corner of the selection. The origin
+  (0,0) of the coordinate system is the upper left corner of the image.
+  <p><b>maxOf(n1, n2)</b><br>
+  Returns the greater of two values.
+  <p><b>minOf(n1, n2)</b><br>
+  Returns the smaller of two values.
+  <p><b>moveTo(x, y)</b><br>
+  Sets the current drawing location. The origin is always assumed to be the
+  upper left corner of the image.
+  <p><b>nCoordinates</b><br>
+  Returns the number of XY coordinates used to define the current polygonal
+  selection. Returns zero if there is no selection or the selection is not a
+  closed polygon. The parentheses &quot;()&quot; are optional. The coordinates
+  are stored in the xCoordinates[] and yCoordinates[] built-in arrays.
+  <p><b>nImages</b><br>
+  Returns number of open images. The parentheses &quot;()&quot; are optional.
+  <p><b>nResults</b><br>
+  Returns the current measurement counter value. The parentheses &quot;()&quot;
+  are optional.
+  <p><b>nSlices</b><br>
+  Returns number of slices in current stack. The parentheses &quot;()&quot; are
+  optional.
+  <p><b>pow(n1, n2)</b><br>
+  Returns the value of the <i>n1</i> raised to the power of <i>n2</i>.
+  <p><b>print(string)</b><br>
+  Outputs a string to the &quot;Log&quot; window. Numeric arguments are
+  automatically converted to strings.
+  <p><b>random()</b><br>
+  Returns a random number between 0 and 1.
+  <p><b>requires(&quot;1.29p&quot;)</b><br>
+  Display a message and aborts the macro if the ImageJ version is less than the
+  one specified.
+  <p><b>reset()</b><br>
+  Restores the backup image created by snapshot().
+  <p><b>resetMinAndMax()</b><br>
+  Resets the minimum and maximum displayed pixel values (display range) to be
+  the same as the current image's minimum and maximum pixel values.
+  <p><b>resetThreshold()</b><br>
+  Disables thresholding.
+  <p><b>round(n)</b><br>
+  Returns the closest integer to <i>n</i>.
+  <p><b>run(&quot;command&quot;[, &quot;options&quot;])</b><br>
+  Executes an ImageJ menu command. The optional second argument contains values
+  that are automatically entered into dialog boxes (must be GenericDialog or
+  OpenDialog). Use the Command Recorder (<i>Plugins/Record</i>) to generate
+  run() function calls.
+  <p><b>selectionType()</b><br>
+  Returns the selection type, where 0=rectangle, 1=oval, 2=polygon, 3=freehand,
+  4=traced, 5=straight line, 6=segmented line and 7=freehand line. Returns -1 if
+  there is no selection. Requires v1.30a or later.
+  <p><b>selectWindow(&quot;name&quot;)</b><br>
+  Activates the image window with the title &quot;name&quot;.
+  <p><b>setBackgroundColor(r, g, b)</b><br>
+  Sets the background color, where <i>r</i>, <i>g</i>, and <i>b</i> are &gt;= 0
+  and &lt;= 255.
+  <p><b>setColor(r, g, b)</b><br>
+  Sets the drawing color, where <i>r</i>, <i>g</i>, and <i>b</i> are &gt;= 0 and
+  &lt;= 255. This function is faster than setForegroundColor() and does not
+  change the system wide foreground color or repaint the color picker tool icon.
+  <p><b>setColor(value)</b><br>
+  Sets the drawing color. For 8 bit images, 0&lt;=<i>value</i>&lt;=255. For 16
+  bit images, 0&lt;=<i>value</i>&lt;=65535. For RGB images, use hex constants
+  (e.g., 0xff0000 for red). Requires v1.30a or later.
+  <p><b>setForegroundColor(r, g, b)</b><br>
+  Sets the foreground color, where <i>r</i>, <i>g</i>, and <i>b</i> are &gt;= 0
+  and &lt;= 255.
+  <p><b>setLineWidth(width)</b><br>
+  Specifies the line width (in pixels) used by drawLine() and lineTo().
+  <p><b>setLocation(x, y)</b><br>
+  Moves the active image window to a new location. Requires v1.30c or later.
+  <p><b>setMinAndMax(min, max)</b><br>
+  Sets the minimum and maximum displayed pixel values (display range).
+  <p><b>setPasteMode(&quot;mode&quot;)</b><br>
+  Sets the transfer mode used by the <i>Edit/Paste</i> command, where
+  &quot;mode&quot; is &quot;Copy&quot;, &quot;Blend&quot;, &quot;Average&quot;,
+  &quot;Difference&quot;, &quot;Transparent&quot;, &quot;AND&quot;,
+  &quot;OR&quot;, &quot;XOR&quot;, &quot;Add&quot;, &quot;Subtract&quot;,
+  &quot;Multiply&quot;, or &quot;Divide&quot;.
+  <p><b>setPixel(x, y, value)</b><br>
+  Stores <i>value</i> at location (<i>x,y</i>) of the current image. The screen
+  is updated when the macro exits or call updateDisplay() to have it updated
+  immediately.
+  <p><b>setThreshold(lower, upper)</b><br>
+  Sets the lower and upper threshold levels.
+  <p><b>setTool(id)</b><br>
+  Switches to the specified tool, where 0=rectangle selection tool, 1=oval
+  selection tool, 2=segmented selection tool, etc.
+  <p><b>showMessage([&quot;title&quot;,]&quot;message&quot;)</b><br>
+  Displays &quot;message&quot; in a dialog box. &quot;Title&quot; (optional) is
+  the dialog box title.
+  <p><b>showMessageWithCancel([&quot;title&quot;,]&quot;message&quot;)</b><br>
+  Displays &quot;message&quot; in a dialog box with &quot;OK&quot; and
+  &quot;Cancel&quot; buttons. &quot;Title&quot; (optional) is the dialog box
+  title. Returns <i>true</i> if the user clicks &quot;OK&quot; or <i>false</i>
+  if the user clicks &quot;Cancel&quot;.
+  <p><b>showProgress(progress)</b><br>
+  Updates the ImageJ progress bar, where 0.0&lt;=<i>progress</i>&lt;=1.0. The
+  progress bar is not displayed if the time between the first and second calls
+  to this function is less than 30 milliseconds. It is erased when the macro
+  terminates or <i>progress</i> is &gt;=1.0.
+  <p><b>showStatus(&quot;message&quot;)</b><br>
+  Displays a message in the ImageJ status bar.
+  <p><b>sin(angle)</b><br>
+  Returns the sine of an angle (in radians).
+  <p><b>snapshot()</b><br>
+  Creates a backup copy of the current image that can be restored using reset().
+  <p><b>sqrt(n)</b><br>
+  Returns the square root of <i>n</i>.
+  <p><b>tan(angle)</b><br>
+  Returns the tangent of an angle (in radians).
+  <p><b>toBinary(number)</b><br>
+  Returns a binary string representation of <i>number</i>.
+  <p><b>toHex(number)</b><br>
+  Returns a hexadecimal string representation of <i>number</i>.
+  <p><b>updateDisplay()</b><br>
+  Redraws the active image.
+  <p><b>wait(n)</b><br>
+  Delays (sleeps) for <i>n</i> milliseconds.
+  <p><b>write(string)</b><br>
+  Outputs a string to the &quot;Results&quot; window. Numeric arguments are
+  automatically converted to strings.
+  <p><b>xCoordinates[i]</b> (built-in array)<br>
+  Returns the <i>i</i>th X coordinate of the current polygonal selection, where
+  0&lt;=<i>i</i>&lt;nCoordinates.
+  <p><b>yCoordinates[i]</b> (built-in array)<br>
+  Returns the <i>i</i>th Y coordinate of the current polygonal selection, where
+  0&lt;=<i>i</i>&lt;nCoordinates.
+  <p>&nbsp;</p>
+</blockquote>
+<p>&nbsp;</p>
+
+<!--mstheme--></font></body>
+
+</html>

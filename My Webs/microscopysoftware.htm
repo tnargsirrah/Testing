@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Light Microscopy Software in Java</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+  body, td { font-family: Verdana; font-size: 10pt; }
+  #title a, #footer a { color: #304270; text-decoration: underline; }
+  #title a:hover, #footer a:hover { color: blue; }
+  #title { font-weight: bold; }
+  #date { text-align: right; margin-left: 10px; }
+  #author { text-align: right; font-style: italic; }
+  #auto { font-style: italic; }
+  #manual { font-weight: bold; }
+  #note { border: 2px solid #cee0f5; }
+  #notebar td, #footer td { color: #304270; padding: 2px; padding-left: 4px; padding-right: 4px; background: #cee0f5; font-size: 8pt; }
+  #footer td { font-size: 7pt; }
+  #download { text-align: right; margin-left: 10px; }
+  #body { padding: 15px; }
+  #body h1, #body h2, #body h3 { margin-top: 0px; margin-bottom: 10px; }
+  #body h1 { font-size: 1.8em; }
+  #body h2 { font-size: 1.5em; }
+  #body h3 { font-size: 1.2em; }
+  </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 10">
+    <meta name="Originator" content="Microsoft Word 10">
+  </head>
+  <body>
+    <basefont face="Verdana" size="2"><!-- Begin note[5224] --><strong><font
+        color="#800080" size="5">Light Microscopy Software in Java </font></strong><img
+      style="border: 0px solid ; width: 48px; height: 48px;" alt="image"
+src="images%5C0013@5224_0002@5224_0018@4748_0006@4748_0000@4415_0-41265fbb6e1f1969.png"
+      align="top"><br>
+    <table style=" text-align: left; width: 100%;" border="1"
+      cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;">
+            <meta http-equiv="Content-Type" content="text/html;
+              charset=UTF-8">
+            <basefont face="Verdana" size="2"><strong></strong><img
+src="data:image/png;base64,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"
+              alt="">
+            <h3><a href="http://www.scijava.org/"><em>SciJava</em></a></h3>
+            <div><a href="http://scijava.github.com/"><strong>http://scijava.github.com</strong></a></div>
+            <div><a href="http://groups.google.com/group/scijava"><em>scijava</em>
+                | Google Groups</a></div>
+            <div>&nbsp;</div>
+            <div><a href="https://github.com/scijava/scijava-common"><strong>scijava-common</strong></a>
+              / <a
+                href="https://github.com/scijava/scijava-common/tree/master/pom-scijava">pom-scijava</a>
+              / <strong>pom.xml</strong></div>
+            <div>&nbsp;</div>
+            <div><a href="https://www.openmicroscopy.org/">OME</a></div>
+            <div>&nbsp;</div>
+            <div><a href="https://github.com/scijava"><strong>&nbsp;scijava
+
+
+                </strong></a><strong>&nbsp;/ <a
+                  href="https://github.com/scijava/scijava-common">scijava-common</a></strong></div>
+            <pre>ImageJ1 - <a href="http://github.com/fiji/imageja">http://github.com/fiji/imageja</a>
+ImgLib  - <a href="http://github.com/imagej/imglib">http://github.com/imagej/imglib</a>
+ImageJ2 - <a href="http://github.com/imagej/imagej">http://github.com/imagej/imagej</a>
+<br><a href="http://www.loci.wisc.edu/software/bio-formats">Bio-Formats</a><br><a href="http://github.com/openmicroscopy/bioformats">http://github.com/openmicroscopy/bioformats</a><br><a href="http://loci.wisc.edu/software/scifio">Scifio</a><br><br>LOCI<br><a href="http://github.com/uw-loci/loci-software">http://github.com/uw-loci/loci-software</a>
+<font face="monospace"></font></pre>
+            <font face="monospace"></font></td>
+          <td style="vertical-align: top;"><a
+              href="http://micro-manager.org/"><strong><font size="4">MicroManager</font></strong></a><br>
+            <br>
+            <font size="-1"><a
+                href="http://valelab.ucsf.edu/%7Enico/MMwiki/index.php/Main_Page">Wiki</a>
+              <br>
+              <a
+href="http://sourceforge.net/mailarchive/forum.php?forum_name=micro-manager-general"
+                class="external text" rel="nofollow">Browse</a> | <a
+href="http://sourceforge.net/search/?group_id=167393&amp;type_of_search=mlists"
+                class="external text" rel="nofollow">Search</a> |<big><a
+                  href="http://micro-manager.3463995.n2.nabble.com/"
+                  class="external text" rel="nofollow">Nabble</a></big><br>
+              <a
+                href="https://valelab.ucsf.edu/trac/micromanager/timeline">IssueTracker</a></font><font
+              size="-1"><br>
+              <a
+                href="http://valelab.ucsf.edu/%7EMM/nightlyBuilds/1.4/Windows/">NightlyBuild</a></font>
+          </td>
+          <td style="vertical-align: top;"><big><big><big><a
+                    href="http://icy.bioimageanalysis.org/">Icy</a><br>
+                </big></big></big>
+            <pre><font face="monospace">
+</font></pre>
+            <font face="monospace">
+              <div><a href="http://knime.org/">Knime</a><br>
+                KNIP - <small><a
+                    href="http://tech.knime.org/community/image-processing">Image
+
+
+                    Processing and Analysis in KNIME</a></small> </div>
+            </font> </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">
+            <p><big style="font-weight: bold;"><a
+                  href="http://developer.imagej.net/" target="_blank">developer.imagej.net</a></big><br>
+              <br>
+              <span style="font-weight: bold;"><a
+                  href="http://code.imagej.net/">ImageJ Trac</a><br>
+              </span><br>
+              <a href="http://fiji.sc/cgi-bin/imagejdev-irc">#imagejdev-devel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                logs</a><br>
+            </p>
+            <p><a href="http://imagej.net/mailman/listinfo/imagej-devel">imagej-devel
+
+                Mailing List</a></p>
+            <pre><a href="http://code.imagej.net:8080/job/ImgLib-daily/javadoc/">Docs, Daily</a><br></pre>
+            <p style="font-weight: bold;"><a
+                href="http://code.imagej.net/trac/imglib/timeline">imglib
+
+
+
+                Trac</a></p>
+            <p><a href="http://dev.loci.wisc.edu:8081/">Nexus repository</a>&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+              <a href="http://dev.loci.wisc.edu:8080/">Hudson</a><br>
+            </p>
+            <p>SVN: imagej <a style=" font-weight: bold;"
+                href="http://code.imagej.net/svn/imagej/trunk/">trunk</a><br>
+              <br>
+              <span style="font-weight: bold;">MailingLists: </span><br>
+              <a href="http://list.nih.gov/archives/imagej.html">ImageJ</a>
+              | <a href="http://groups.google.com/group/imagejx">ImageJX</a>
+              <br>
+              <a href="http://groups.google.com/group/fiji-users">Fiji
+                Users</a> | <a
+                href="http://groups.google.com/group/fiji-devel/topics?gvc=2">Fiji
+Dev
+
+
+
+
+
+
+
+
+              </a><br>
+              <a
+href="http://sourceforge.net/mailarchive/forum.php?forum_name=micro-manager-general">MicroManager</a><br>
+              <a
+                href="http://lists.openmicroscopy.org.uk/pipermail/ome-users/">OME
+
+
+
+
+
+
+
+                Users</a> | <a
+                href="http://lists.openmicroscopy.org.uk/pipermail/ome-devel/">OME
+
+
+
+
+
+
+
+                Dev</a> | <a
+                href="https://lists.wisc.edu/read/about/?forum=locisoftware">LOCIsoftware</a><br>
+              <a
+                href="http://groups.google.com/group/sci.optics?lnk=rgr">Biomedical
+
+
+
+
+
+
+
+                Image Processing<br>
+                sci.optics</a> <br>
+              <a class="on"
+                href="http://groups.google.com/group/sci.image.processing?lnk=">sci.image.processing</a><br>
+              <a
+                href="http://groups.google.com/group/sci.techniques.microscopy?lnk=">sci.techniques.microscopy</a></p>
+          </td>
+          <td style="vertical-align: top;">
+            <div><a href="http://rsb.info.nih.gov/ij"><img
+src="images%5C0000@5224_0019@4748_0002@4748_0001@4492_4492-41265fecf7e635db.png"
+                  border="0"></a><br>
+              <div><a
+                  href="http://rsb.info.nih.gov/ij/plugins/index.html">Plugins</a></div>
+              <div><a href="http://rsb.info.nih.gov/ij/search.html">Search</a></div>
+              <div><a href="http://rsb.info.nih.gov/ij/notes.html">ImageJ
+
+
+
+
+
+
+
+                  News</a></div>
+              <div><a
+                  href="http://rsb.info.nih.gov/ij/developer/index.html">Developer
+
+
+
+
+
+
+
+                  Resources</a></div>
+              <div><a
+                  href="http://rsb.info.nih.gov/ij/developer/api/index.html">ImageJ
+
+
+
+
+
+
+
+                  API</a></div>
+              <div><a
+                  href="http://rsb.info.nih.gov/ij/developer/macro/macros.html">Macro
+
+
+
+
+
+
+
+                  Language</a></div>
+              <div><a
+                  href="http://rsb.info.nih.gov/ij/developer/macro/functions.html">Built-in
+
+
+
+
+
+
+
+                  Macro Functions</a></div>
+              <a href="http://list.nih.gov/archives/imagej.html">MailingList</a><br>
+              <br>
+              <a href="http://micro-manager.org/"><img
+                  src="images%5C0028@5224_5224-412661752f5dad52.png"
+                  border="0"><strong><font size="4"><br>
+                    MicroManager</font></strong></a><br>
+              <a
+                href="http://valelab.ucsf.edu/%7Enico/MMwiki/index.php/Main_Page">Wiki</a>
+              <br>
+              MailingList: <a
+href="http://sourceforge.net/mailarchive/forum.php?forum_name=micro-manager-general"
+                class="external text" rel="nofollow">Browse</a> | <a
+href="http://sourceforge.net/search/?group_id=167393&amp;type_of_search=mlists"
+                class="external text" rel="nofollow">Search</a> |<br>
+              <a href="http://micro-manager.3463995.n2.nabble.com/"
+                class="external text" rel="nofollow">Search at Nabble</a><br>
+              <br>
+              <a
+redirectcleaner="/url?sa=t&amp;rct=j&amp;q=mission%20bay%20imaging&amp;source=web&amp;cd=1&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Fmissionbayimaging.com%2F&amp;ei=7D0XT--cOsLogAeD3K3QAw&amp;usg=AFQjCNGBjdrBjskC7VUf0_CxFfs_hWgNqw"
+                href="http://missionbayimaging.com/" class="l">Mission
+                Bay Imaging, Inc.</a><br>
+              <a href="http://www.100ximaging.com/index.html">100X
+                Imaging</a><br>
+              <br>
+            </div>
+          </td>
+          <td style="vertical-align: top;">
+            <div><a href="http://www.loci.wisc.edu/"><img
+                  src="images%5C0044@5224_0043@5224_5224-412662754672894b.png"
+                  border="0"><small><small><br>
+                  </small></small></a><small><small><a
+                    href="http://www.loci.wisc.edu/"><strong><font
+                        size="3"><small><small>Laboratory for Optical
+                            and<br>
+                            Computational Instrumentation (LOCI)</small></small></font></strong></a></small></small><br>
+              <small>at the University of Wisconsin Madison.</small>
+              <div><a href="http://www.loci.wisc.edu/visbio"><img
+                    src="images%5C0037@5224_0030@5224_0027@5224_5224-412661752ebe635e.png"
+                    border="0"></a><br>
+                <a
+                  href="https://lists.wisc.edu/read/about/?forum=locisoftware">Locisoftware
+
+
+
+
+
+
+
+                  Mailing List</a><br>
+                <a href="http://www.loci.wisc.edu/ome/formats.html">Bio-Formats</a><br>
+                <a href="http://www.loci.wisc.edu/ome/notes.html">OME
+                  Notes</a> <br>
+                <a href="http://www.loci.wisc.edu/ome/jvmlink.html">JVMLink</a>
+                <br>
+                <a href="http://www.loci.wisc.edu/ome/browser.html">Data
+                  Browser</a> <br>
+                <a href="http://www.loci.wisc.edu/ome/imagej.html">OME
+                  plugins for ImageJ</a> <br>
+                <a href="http://www.loci.wisc.edu/ome/loci-ome-xml.html">Java
+
+
+
+
+
+
+
+                  OME-XML library</a><br>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><a
+              href="http://pacific.mpi-cbg.de/"><img
+                src="images%5C0020@5224_5224-412661752cbc1cd3.png"
+                border="0"> </a><a href="http://pacific.mpi-cbg.de/"><strong><font
+                  size="4">FIJI</font></strong></a><br>
+            <a
+              href="http://pacific.mpi-cbg.de/wiki/index.php/Developing_Fiji">Developing
+
+
+
+
+
+
+
+              Fiji</a><br>
+            <a
+              href="http://pacific.mpi-cbg.de/wiki/index.php/Plugins_Menu">Fiji
+
+
+
+
+
+
+
+              Plugins Menu</a><br>
+            Mailing Lists: <a
+              href="http://groups.google.com/group/fiji-users">Fiji
+              users'</a> &nbsp;<a
+              href="http://groups.google.com/group/fiji-devel">Fiji
+              developers'</a><br>
+            <a
+              href="http://pacific.mpi-cbg.de/cgi-bin/gitweb.cgi?p=fiji.git;a=summary">Repository</a><br>
+            <a href="http://repo.or.cz/w/imageja.git/">ImageJA</a> <br>
+            <a href="http://pacific.mpi-cbg.de/wiki/index.php/Git">Using
+              GIT</a><br>
+            <a
+              href="http://www.mcdb.ucla.edu/Research/Hartenstein/acardona">Albert
+
+
+
+
+
+
+
+              Cardona</a><br>
+            <a href="http://www.ini.uzh.ch/%7Eacardona/trakem2.html">TrakEM2</a><br>
+            <br>
+          </td>
+          <td style=" vertical-align: top;">
+            <div><img style="border: 0px solid ; width: 78px; height:
+                74px;" alt="ImageJ Doc Wiki"
+                src="images%5C0019@5224_5224-412661752c3cae76.png"
+                align="middle"><a href="http://imagejdocu.tudor.lu/">ImageJ
+Documentation
+
+
+
+
+
+
+
+                Wiki</a></div>
+          </td>
+          <td style="vertical-align: top;"><a
+              href="http://www.cellprofiler.org/index.htm"><img
+                src="file:///DOCUME%7E1/GBH/LOCALS%7E1/Temp/moz-screenshot-8.png"
+                alt="CellProfiler" style="border: 0px solid ; width:
+                165px; height: 63px;"></a><br>
+            <a href="http://www.broad.mit.edu/imaging"><img
+                src="file:///DOCUME%7E1/GBH/LOCALS%7E1/Temp/moz-screenshot-7.png"
+                alt="Broad Inst" style="border: 0px solid ; width: 99px;
+                height: 25px;"></a></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">
+            <div>
+              <div><a href="http://www.openmicroscopy.org/site"><img
+                    src="images%5C0024@5224_0023@5224_5224-412661752dc71c72.png"
+                    border="0"></a><a
+                  href="http://www.openmicroscopy.org/site"> </a> </div>
+              <div> </div>
+              <br>
+              <a href="http://www.ome-xml.org/"><img
+                  src="images%5C0022@5224_5224-412661752d6789ac.png"
+                  border="0"></a> The OME Data Model</div>
+            <div> </div>
+            <div><a
+                href="http://users.openmicroscopy.org.uk/%7Ewill/OMERO.editor.html">OMERO.editor</a></div>
+            <div><a href="http://trac.openmicroscopy.org.uk/shoola/wiki"><img
+                  src="images%5C0034@5224_5224-412661d9c9401846.png"
+                  border="0"></a></div>
+            <div> </div>
+            <div>
+              <p><a href="http://trac.openmicroscopy.org.uk/omero"><img
+                    src="images%5C0036@5224_5224-412661d9cdc71c72.png"
+                    border="0"></a> TRAC<br>
+                <a
+                  href="http://trac.openmicroscopy.org.uk/omero/wiki/OmeroClients">OMERO.blitz</a><br>
+                <a
+                  href="http://trac.openmicroscopy.org.uk/omero/wiki/OmeroClients">OMERO
+Java
+
+
+
+
+
+
+
+                  Language Bindings</a><br>
+                <a
+                  href="http://trac.openmicroscopy.org.uk/omero/wiki/OmeroClients">OMERO
+Application
+
+
+
+
+
+
+
+                  Programming Interface<br>
+                  DRAFT Writing a Client for </a><a
+                  href="http://trac.openmicroscopy.org.uk/omero/wiki/OmeroBlitz">OmeroBlitz</a></p>
+            </div>
+          </td>
+          <td style="vertical-align: top;">
+            <h1><a
+                href="http://missionbayimaging.com/mbimaging2010/Welcome.html"><font
+                  size="2"><img
+                    src="images%5C0035@5224_0021@5224_5224-412661752d44a55b.png"
+                    border="0"></font></a></h1>
+            <a
+              href="http://missionbayimaging.com/mbimaging2010/Welcome.html">
+            </a>
+            <h1><a href="http://www.glencoesoftware.com/"><img
+                  alt="Glencoe"
+                  src="images%5C0033@5224_0032@5224_5224-412661753b46ebe6.png"
+                  style="border: 0px solid; width: 129px; height: 36px;
+                  border: 0px solid;"></a></h1>
+            <p><a
+                href="http://missionbayimaging.com/mbimaging2010/Welcome.html">Mission
+
+
+
+
+                Bay Imaging<br>
+              </a></p>
+            <a
+              href="http://missionbayimaging.com/mbimaging2010/Welcome.html">
+            </a></td>
+          <td style="vertical-align: top;">
+            <div><br>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><img
+              src="images%5C0029@5224_0018@5224_0017@5224_5224-412660efafec474d.png"
+              border="0"> <br>
+            <a href="http://bigwww.epfl.ch/algorithms.html">Biomedical
+              Imaging Group EPFL </a><br>
+            (ImageJ Plugins)</td>
+          <td style="vertical-align: top;"><a
+              href="http://www.endrov.net/"><strong><em><font size="5">Endrov</font></em></strong></a><strong>
+            </strong>&nbsp;Karolinska Institute </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table style="width: 100%;" border="0" cellpadding="2"
+      cellspacing="2">
+      <tbody>
+        <tr>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">
+            <div><br>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><big><a style="font-weight:
+                bold;" href="http://www.100ximaging.com/index.html"><br>
+              </a></big></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><img
+              src="../../../../DOCUME%7E1/GBH/LOCALS%7E1/Temp/moz-screenshot-3.jpg"
+              alt=""> <span style="font-weight: bold;"></span><a
+href="http://www.bioimage.ucsb.edu/bisque/24-databases/22-bisque-database"><strong>Bisque
+
+
+
+
+
+
+
+                Database</strong></a>&nbsp; <a
+              href="http://biodev.ece.ucsb.edu/projects/bisquik/wiki">Wiki</a></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><a
+              href="http://www.endrov.net/"><strong><em><font size="5"><br>
+                  </font></em></strong></a></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><a
+              href="http://cismm.cs.unc.edu/downloads/?dl_cat=2"><strong><font
+                  face="Arial" size="4">ImageSurfer</font></strong></a><font
+              face="Arial"> <br>
+            </font><font face="Arial">Multidimensional analysis and
+              visualization, u</font>ses VTK / ITK, Java3D<br>
+            CISMM - Computer Integrated Systems for Microscopy and
+            Manipulation (Univ NC)<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><small style="font-weight:
+              bold;"><a href="http://code.google.com/p/improvis"><font
+                  size="5"><small>improvis</small></font></a><font
+                size="5"><small> </small></font></small>IMage
+            PROcessing, VISualization and analysis (??)</td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><small style="font-weight:
+              bold;"><a href="http://neurospy.org/"><em><font size="5"><small>neurospy</small></font></em></a><em>
+                <br>
+              </em></small>Free software for functional imaging of fast
+            neuronal activity. <code>neurospy</code> is a modular
+            cross-platform application framework written in Java for the
+            <a href="http://platform.netbeans.org/">NetBeans Platform</a>.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><img
+              src="images%5C0010@5224_0010@4748_4748-412660160454f43e.png"
+              border="0"><a
+              href="http://www.uni-bielefeld.de/biologie/Oekosystembiologie/bio7app">/bio7app/</a>
+            EclipseRCP-based </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><big style="font-weight:
+              bold;"><a href="http://www.bioimagexd.net/">BioImageXD</a></big><span
+              style="font-weight: bold;"> </span>Python, VTK, ITK</td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">
+            <h3 class="r"><small><a href="http://www.loni.ucla.edu/"
+                  class="l" onmousedown="return
+                  clk(this.href,'','','res','2','','0CBEQFjAB')"><em>LONI</em>:
+                  <em>Laboratory of Neuro Imaging</em></a></small> <small
+                style="font-weight: normal;">UCLA</small></h3>
+            e.g. <a
+              href="http://www.loni.ucla.edu/Software/LONI-Inspector">LONI
+
+
+
+
+
+
+
+              Inspector</a><br>
+            &nbsp; <a
+              href="http://www.loni.ucla.edu/Software/LONI-Inspector"><br>
+            </a></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><small><strong><font
+                  face="arial" size="5"><small><a
+                      href="http://ric.uthscsa.edu/mango/">Mango</a> </small></font></strong>&nbsp;</small><font
+              face="arial" size="4"><small>&nbsp;<strong>M</strong>ulti-Image
+
+
+
+
+
+
+
+                <strong>An</strong>alysis <strong>G</strong>UI&nbsp;
+                (not open source)</small><br>
+            </font></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">
+            <div align="left">
+              <p><a href="http://www.ssec.wisc.edu/%7Ebillh/visad.html"><img
+                    style="border: 0px solid ; width: 75px; height:
+                    33px;"
+                    src="../../../../DOCUME%7E1/GBH/LOCALS%7E1/Temp/moz-screenshot-5.jpg"
+                    alt=""></a></p>
+              <p><strong> <a href="http://www.vtk.org/">Visualization
+                    Toolkit (VTK)</a></strong></p>
+              <p><strong></strong><strong><a href="http://www.itk.org/">Insight
+Segmentation
+
+
+
+
+
+
+
+                    and Registration Toolkit (ITK)</a></strong></p>
+              <br>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><big><a style="font-weight:
+                bold;" href="http://3d-xplormath.org/j/index.html">3D-XplorMath-J</a></big><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><a
+              href="http://www.eslide.net/ijstage.php"><font size="4">eSlide</font>
+              IJStage &amp; IJSerial</a> ImageJ plugins</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <div><a href="http://micro-manager.org/"><strong><font size="4"></font></strong></a></div>
+    <br>
+    <table style="text-align: left; width: 100%;" border="1"
+      cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;">
+            <p><a
+                href="http://worms.zoology.wisc.edu/research/4d/4d.html"><img
+src="images%5C0011@5224_0004@4748_0002@4492_0001@4493_4493-41265fecf80795cf.png"
+                  border="0"></a></p>
+          </td>
+          <td style="vertical-align: top;">ImageJ Plugins...<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">
+            <p><a href="http://www.macbiophotonics.ca/"><img
+                  src="images%5C0012@5224_0005@4748_0003@4492_4492-41265fecf8506729.png"
+                  border="0"></a></p>
+          </td>
+          <td style="vertical-align: top;"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div><strong><font size="3">Image Processing Tutorials</font></strong></div>
+    <blockquote>
+      <div><a
+href="http://www.mcdb.ucla.edu/Research/Hartenstein/acardona/imagej_programming_tutorials.html">http://www.mcdb.ucla.edu/Research/Hartenstein/acardona/imagej_programming_tutorials.html</a></div>
+      <div><a
+          href="http://www.ph.tn.tudelft.nl/Courses/FIP/noframes/fip.html">Fundamentals
+
+
+
+
+
+
+
+          of Image Processing</a></div>
+      <div><a
+href="http://www.reindeergraphics.com/index.php?option=com_content&amp;task=view&amp;id=196&amp;Itemid=120">Image
+
+
+
+
+
+
+
+          Analysis Cookbook</a></div>
+      <div><a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2">ImageProcessing
+
+
+
+
+
+
+
+          with Java (HIPR2)</a></div>
+      <div><a href="http://www.bioss.ac.uk/staff/chris.html"
+          target="_blank">Image Analysis for the Biological Sciences
+          (online)</a></div>
+    </blockquote>
+    <!-- Note [5224] content end --><!-- End note[5224] --><!-- Begin Footer -->
+    <br>
+    <br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+  </body>
+</html>
